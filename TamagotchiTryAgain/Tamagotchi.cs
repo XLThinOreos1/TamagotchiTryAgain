@@ -36,4 +36,25 @@ public class Tamagotchi
         }
     }
 
+    private void ReduceBoredom()
+    {
+        boredom--;
+        Console.WriteLine("Your tamagotchi is now less bored");
+    }
+
+    public void Teach(string word)
+    {
+        words.Add(word);
+        ReduceBoredom();
+        Console.WriteLine($"You taught {name} the word {word}");
+        Console.WriteLine($"{name} is now slightly smarter");
+    }
+
+    public void Hi()
+    {
+        int RandomWord = generator.Next(words.Count);
+        Console.WriteLine($"{words[RandomWord]}");
+
+        ReduceBoredom();
+    }
 }

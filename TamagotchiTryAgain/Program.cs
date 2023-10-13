@@ -3,8 +3,9 @@ Tamagotchi Tama = new();
 
 Tama.name = Console.ReadLine();
 
-while (Tama.GetAlive())
+while (Tama.GetAlive() == true)
 {
+    Console.Clear();
 
 }
 
